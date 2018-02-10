@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import 'normalize-css';
 import './app.scss';
 
+import Header from './Header/Header';
+import Content from './Content/Content';
+
 class App extends Component {
   constructor() {
     super();
@@ -9,7 +12,10 @@ class App extends Component {
   }
   render() {
     return (
-      <h1> Hello World </h1>
+      <div>
+        <Header />
+        <Content />
+      </div>
     );
   }
 }

@@ -1,5 +1,6 @@
-$backgroundColor: rgb(250, 250, 250);
+@import './variables';
 
 body {
-  background-color: $backgroundColor;
+  background-color: $background-color;
+  color: $text-color;
 }

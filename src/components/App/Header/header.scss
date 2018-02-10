@@ -1,0 +1,11 @@
+@import './../variables';
+
+.header-container {
+  background-color: $main-color;
+  padding: 20px;
+}
+
+.header-title {
+  color: $white;
+  font-size: 20px;
+}
