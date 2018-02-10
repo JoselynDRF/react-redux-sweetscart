@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb",
+
+  "rules": {
+    "space-before-function-paren": ["error", 
+    {
+      "anonymous": "never",
+      "named": "never",
+      "asyncArrow": "never"
+    }],
+    "no-use-before-define": ["error", { "functions": false, "variables": false }],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-console": 0,
+    "max-len": ["error", { "code": 120 }],
+    "jsx-a11y/anchor-is-valid": ["error", { "components": [ "Link" ], "specialLink": [ "to" ] }]
+  }
+}
