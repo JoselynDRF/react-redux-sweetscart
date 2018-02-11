@@ -20,4 +20,12 @@ const cart = (state = [], action) => {
   return state;
 };
 
-export default createStore(combineReducers({ products, cart }), applyMiddleware(thunk));
+// Current category reducer
+const categorySelected = (state = [], action) => {
+  if (action.type === 'CHANGE_CATEGORY_SELECTED') {
+    return action.category;
+  }
+  return state;
+};
+
+export default createStore(combineReducers({ products, cart, categorySelected }), applyMiddleware(thunk));

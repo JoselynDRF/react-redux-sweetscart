@@ -30,4 +30,12 @@ const actionRemoveFromCart = product => (
   }
 );
 
-export { actionLoadProducts, actionAddToCart, actionRemoveFromCart };
+// Change category selected
+const actionChangeCategory = category => (
+  {
+    type: 'CHANGE_CATEGORY_SELECTED',
+    category,
+  }
+);
+
+export { actionLoadProducts, actionAddToCart, actionRemoveFromCart, actionChangeCategory };

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { actionRemoveFromCart } from './../../../../actionCreators';
+import './shoppingCart.scss';
 
 const propTypes = {
   cart: PropTypes.arrayOf(PropTypes.shape()).isRequired,
@@ -9,7 +10,7 @@ const propTypes = {
 };
 
 const ShoppingCart = ({ cart, removeFromCart }) => (
-  <table>
+  <table className="cart-container">
     <tbody>
       {
         cart.map(product => (

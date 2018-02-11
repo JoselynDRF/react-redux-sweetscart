@@ -1,13 +1,12 @@
 import React from 'react';
-
 import ShoppingCart from './ShoppingCart/ShoppingCart';
-import ProductList from './ProductList/ProductList';
+import Products from './Products/Products';
 
 function Content() {
   return (
     <div>
       <ShoppingCart />
-      <ProductList />
+      <Products />
     </div>
   );
 }
