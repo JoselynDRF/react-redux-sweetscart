@@ -21,7 +21,7 @@ const cart = (state = [], action) => {
 };
 
 // Current category reducer
-const categorySelected = (state = [], action) => {
+const categorySelected = (state = {}, action) => {
   if (action.type === 'CHANGE_CATEGORY_SELECTED') {
     return action.category;
   }

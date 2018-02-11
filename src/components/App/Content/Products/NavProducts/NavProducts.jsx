@@ -1,44 +1,54 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { actionChangeCategory } from './../../../../../actionCreators';
 
-function NavProducts({ categories, changeCategory }) {
-  return (
-    <div>
-      <ul>
-        <li key="all" onClick={() => changeCategory([])}> All </li>
-        {
-          categories.map(category => (
-            <li key={category.id} onClick={() => changeCategory(category)}> { category.name } </li>
-          ))
-        }
-      </ul>
-    </div>
+const propTypes = {
+  changeCategory: PropTypes.func.isRequired,
+};
 
-  );
-}
-
-// TEST
-const mapStateToProps = state => {
-  // console.log(state);
+function NavProducts({ changeCategory }) {
   const categories = [
     { id: 'candies', name: 'Candies' },
     { id: 'chocolates', name: 'Chocolates' },
     { id: 'parties', name: 'Parties' },
-  ]
-  return {
-    categories,
-  }
-};
+  ];
+
+  return (
+    <div>
+      <ul>
+        <li
+          key="all"
+          onClick={() => changeCategory()}
+          role="presentation"
+          onKeyDown={() => {}}
+        >
+          All
+        </li>
+        {
+          categories.map(category => (
+            <li
+              key={category.id}
+              onClick={() => changeCategory(category)}
+              role="presentation"
+              onKeyDown={() => {}}
+            >
+              { category.name }
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  );
+}
 
 const mapDispatchToProps = dispatch => (
   {
-    changeCategory(category) {
+    changeCategory(category = {}) {
       dispatch(actionChangeCategory(category));
     },
   }
 );
 
-// ProductList.propTypes = propTypes;
-export default connect(mapStateToProps, mapDispatchToProps)(NavProducts);
+NavProducts.propTypes = propTypes;
+export default connect(null, mapDispatchToProps)(NavProducts);
