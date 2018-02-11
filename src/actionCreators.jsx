@@ -22,4 +22,12 @@ const actionAddToCart = product => (
   }
 );
 
-export { actionLoadProducts, actionAddToCart };
+// Remove product from shopping cart
+const actionRemoveFromCart = product => (
+  {
+    type: 'REMOVE_FROM_CART',
+    product,
+  }
+);
+
+export { actionLoadProducts, actionAddToCart, actionRemoveFromCart };

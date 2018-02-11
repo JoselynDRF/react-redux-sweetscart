@@ -1,5 +1,5 @@
 # ReactJS/Redux - SweetsCart
-Project for educational purposes (React and Redux).
+Project for educational purposes (ReactJS and Redux).
 
 ## Getting Started
 
