@@ -45,7 +45,7 @@ const ShoppingCart = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity
                 cart.map(product => (
                   <tr key={product.id}>
                     <td>
-                      <img src={product.image} alt={product.name} height="50px" />
+                      <img src={product.image} alt={product.name} className="product-img" />
                       <span> {product.name} </span>
                     </td>
                     <td>

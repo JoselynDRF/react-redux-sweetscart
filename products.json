@@ -2,56 +2,218 @@
   "products": [
     { 
       "id": 1,
-      "name": "Product 1",
-      "price": 200,
+      "name": "Candy 1",
+      "price": 10,
       "image": "img/candies.jpg",
       "category": "candies",
-      "stock": 5,
+      "stock": 10,
       "quantity": 0
     },
     { 
       "id": 2,
-      "name": "Product 2",
-      "price": 55,
-      "image": "img/chocolates.jpg",
-      "category": "chocolates",
+      "name": "Candy 2",
+      "price": 10,
+      "image": "img/candies.jpg",
+      "category": "candies",
       "stock": 10,
       "quantity": 0
     },
     { 
       "id": 3,
-      "name": "Product 3",
-      "price": 150,
-      "image": "img/parties.jpg",
-      "category": "parties",
-      "stock": 0,
+      "name": "Candy 3",
+      "price": 10,
+      "image": "img/candies.jpg",
+      "category": "candies",
+      "stock": 10,
       "quantity": 0
     },
     { 
       "id": 4,
-      "name": "Product 4",
-      "price": 200,
+      "name": "Candy 4",
+      "price": 10,
       "image": "img/candies.jpg",
       "category": "candies",
-      "stock": 5,
+      "stock": 10,
       "quantity": 0
     },
     { 
       "id": 5,
-      "name": "Product 5",
-      "price": 55,
+      "name": "Candy 5",
+      "price": 10,
+      "image": "img/candies.jpg",
+      "category": "candies",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 6,
+      "name": "Candy 6",
+      "price": 10,
+      "image": "img/candies.jpg",
+      "category": "candies",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 7,
+      "name": "Candy 7",
+      "price": 10,
+      "image": "img/candies.jpg",
+      "category": "candies",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 8,
+      "name": "Candy 8",
+      "price": 10,
+      "image": "img/candies.jpg",
+      "category": "candies",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 9,
+      "name": "Chocolate 1",
+      "price": 5,
       "image": "img/chocolates.jpg",
       "category": "chocolates",
       "stock": 10,
       "quantity": 0
     },
     { 
-      "id": 6,
-      "name": "Product 6",
-      "price": 150,
+      "id": 10,
+      "name": "Chocolate 2",
+      "price": 5,
+      "image": "img/chocolates.jpg",
+      "category": "chocolates",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 11,
+      "name": "Chocolate 3",
+      "price": 5,
+      "image": "img/chocolates.jpg",
+      "category": "chocolates",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 12,
+      "name": "Chocolate 4",
+      "price": 5,
+      "image": "img/chocolates.jpg",
+      "category": "chocolates",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 13,
+      "name": "Chocolate 5",
+      "price": 5,
+      "image": "img/chocolates.jpg",
+      "category": "chocolates",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 14,
+      "name": "Chocolate 6",
+      "price": 5,
+      "image": "img/chocolates.jpg",
+      "category": "chocolates",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 15,
+      "name": "Chocolate 7",
+      "price": 5,
+      "image": "img/chocolates.jpg",
+      "category": "chocolates",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 16,
+      "name": "Chocolate 8",
+      "price": 5,
+      "image": "img/chocolates.jpg",
+      "category": "chocolates",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 17,
+      "name": "Balloon 1",
+      "price": 20,
       "image": "img/parties.jpg",
       "category": "parties",
-      "stock": 0,
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 18,
+      "name": "Balloon 2",
+      "price": 20,
+      "image": "img/parties.jpg",
+      "category": "parties",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 19,
+      "name": "Balloon 3",
+      "price": 20,
+      "image": "img/parties.jpg",
+      "category": "parties",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 20,
+      "name": "Balloon 4",
+      "price": 20,
+      "image": "img/parties.jpg",
+      "category": "parties",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 21,
+      "name": "Balloon 5",
+      "price": 20,
+      "image": "img/parties.jpg",
+      "category": "parties",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 22,
+      "name": "Balloon 6",
+      "price": 20,
+      "image": "img/parties.jpg",
+      "category": "parties",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 23,
+      "name": "Balloon 7",
+      "price": 20,
+      "image": "img/parties.jpg",
+      "category": "parties",
+      "stock": 10,
+      "quantity": 0
+    },
+    { 
+      "id": 24,
+      "name": "Balloon 8",
+      "price": 20,
+      "image": "img/parties.jpg",
+      "category": "parties",
+      "stock": 10,
       "quantity": 0
     }
   ]

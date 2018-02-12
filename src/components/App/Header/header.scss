@@ -3,7 +3,7 @@
 .header-container {
   background-color: $main-color;
   box-shadow: 0 5px 20px -5px rgba(0, 0, 0, .75);
-  padding: 30px;
+  padding: 20px;
 }
 
 .header-title {
@@ -16,4 +16,9 @@
   color: $white;
   cursor: pointer;
   font-size: 20px;
+}
+
+.img-logo {
+  height: 40px;
+  margin-right: 10px;
 }

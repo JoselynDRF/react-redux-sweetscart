@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import ShoppingCart from './ShoppingCart/ShoppingCart';
 import Products from './Products/Products';
-import imgBanner from './../../../assets/img/candy-banner.jpg';
+import imgBanner from './../../../../src/assets/img/candy-banner.png';
 
 const propTypes = {
   openCart: PropTypes.bool.isRequired,

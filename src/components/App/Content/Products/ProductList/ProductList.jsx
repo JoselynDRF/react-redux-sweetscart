@@ -17,7 +17,7 @@ const ProductList = ({ products, categorySelected, addToCart, removeFromCart }) 
       <div className="col-12 row">
         {
           products.map(product => (
-            <div className="col-12 col-md-6 col-lg-3 text-center" key={product.id}>
+            <div className="col-12 col-md-6 col-lg-4 text-center" key={product.id}>
               <Product product={product} handleAddToCart={addToCart} handleRemoveFromCart={removeFromCart} />
             </div>
           ))
