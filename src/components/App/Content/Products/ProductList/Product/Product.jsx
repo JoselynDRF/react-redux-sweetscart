@@ -13,10 +13,11 @@ const Product = ({ product, handleAddToCart }) => (
       <span> {product.name} </span>
       <button
         onClick={() => handleAddToCart(product)}
-        disabled={product.stock <= 0}
+        disabled={product.stock <= 0 || product.quantity > 0}
       >
         {product.price}€
       </button>
+      {product.quantity}
     </div>
   </div>
 );

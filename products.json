@@ -6,7 +6,8 @@
       "price": 200,
       "image": "img/candies.jpg",
       "category": "candies",
-      "stock": 5
+      "stock": 5,
+      "quantity": 0
     },
     { 
       "id": 2,
@@ -14,7 +15,8 @@
       "price": 55,
       "image": "img/chocolates.jpg",
       "category": "chocolates",
-      "stock": 10
+      "stock": 10,
+      "quantity": 0
     },
     { 
       "id": 3,
@@ -22,7 +24,8 @@
       "price": 150,
       "image": "img/parties.jpg",
       "category": "parties",
-      "stock": 0
+      "stock": 0,
+      "quantity": 0
     }
   ]
 }
