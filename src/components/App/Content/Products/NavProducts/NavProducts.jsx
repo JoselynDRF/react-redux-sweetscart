@@ -6,9 +6,10 @@ import './navProducts.scss';
 
 const propTypes = {
   changeCategory: PropTypes.func.isRequired,
+  categorySelected: PropTypes.shape().isRequired,
 };
 
-function NavProducts({ changeCategory }) {
+function NavProducts({ changeCategory, categorySelected }) {
   const categories = [
     { id: 'candies', name: 'Candies' },
     { id: 'chocolates', name: 'Chocolates' },
@@ -26,7 +27,7 @@ function NavProducts({ changeCategory }) {
           role="presentation"
           onKeyDown={() => {}}
         >
-          All
+          <span className={(!categorySelected.id) ? 'active' : ''}> All </span>
         </li>
         {
           categories.map(category => (
@@ -37,7 +38,7 @@ function NavProducts({ changeCategory }) {
               role="presentation"
               onKeyDown={() => {}}
             >
-              { category.name }
+              <span className={(categorySelected.id === category.id) ? 'active' : ''}> { category.name } </span>
             </li>
           ))
         }
@@ -45,6 +46,12 @@ function NavProducts({ changeCategory }) {
     </div>
   );
 }
+
+const mapStateToProps = state => (
+  {
+    categorySelected: state.categorySelected,
+  }
+);
 
 const mapDispatchToProps = dispatch => (
   {
@@ -55,4 +62,4 @@ const mapDispatchToProps = dispatch => (
 );
 
 NavProducts.propTypes = propTypes;
-export default connect(null, mapDispatchToProps)(NavProducts);
+export default connect(mapStateToProps, mapDispatchToProps)(NavProducts);
