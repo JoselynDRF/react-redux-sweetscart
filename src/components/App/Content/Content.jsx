@@ -5,7 +5,7 @@ import Products from './Products/Products';
 function Content() {
   return (
     <div>
-      <ShoppingCart />
+      {/* <ShoppingCart /> */}
       <Products />
     </div>
   );

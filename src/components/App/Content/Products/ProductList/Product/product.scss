@@ -1,0 +1,28 @@
+@import './../../../../variables';
+
+.product-container {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.product-container img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+// Repetido parecido
+.button-add {
+  background-color: $main-color;
+  color: $white;
+  font-weight: 500;
+}
+
+.button-add:enabled:hover {
+  background-color: darken($main-color, 5%);
+}
+
+.price {
+  font-weight: 500;
+  font-size: 18px;
+}

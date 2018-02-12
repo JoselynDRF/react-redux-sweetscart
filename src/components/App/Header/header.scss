@@ -2,7 +2,8 @@
 
 .header-container {
   background-color: $main-color;
-  padding: 20px;
+  box-shadow: 0 5px 20px -5px rgba(0, 0, 0, .75);
+  padding: 30px;
 }
 
 .header-title {

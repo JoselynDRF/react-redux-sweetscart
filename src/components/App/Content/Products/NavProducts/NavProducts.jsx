@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { actionChangeCategory } from './../../../../../actionCreators';
+import './navProducts.scss';
 
 const propTypes = {
   changeCategory: PropTypes.func.isRequired,
@@ -16,10 +17,12 @@ function NavProducts({ changeCategory }) {
 
   return (
     <div>
-      <ul>
+      <span className="title-products"> PRODUCTS </span>
+      <ul className="list-categories">
         <li
           key="all"
           onClick={() => changeCategory()}
+          className="category"
           role="presentation"
           onKeyDown={() => {}}
         >
@@ -30,6 +33,7 @@ function NavProducts({ changeCategory }) {
             <li
               key={category.id}
               onClick={() => changeCategory(category)}
+              className="category"
               role="presentation"
               onKeyDown={() => {}}
             >

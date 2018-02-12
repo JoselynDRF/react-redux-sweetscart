@@ -1,0 +1,22 @@
+@import './../../../variables';
+
+.title-products {
+  font-weight: 500;
+}
+
+.list-categories {
+  border-top: 1px solid #e9ecef;
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.category {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.category:hover {
+  color: $main-color;
+  font-weight: 500;
+}

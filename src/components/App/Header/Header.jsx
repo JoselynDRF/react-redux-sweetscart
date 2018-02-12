@@ -3,7 +3,7 @@ import './header.scss';
 
 function Header() {
   return (
-    <header className="header-container">
+    <header className="header-container sticky-top">
       <div>
         <span className="header-title"> SweetsCart </span>
       </div>

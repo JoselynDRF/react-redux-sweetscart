@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './product.scss';
 
 const propTypes = {
   product: PropTypes.shape().isRequired,
@@ -7,17 +8,20 @@ const propTypes = {
 };
 
 const Product = ({ product, handleAddToCart }) => (
-  <div key={product.id}>
-    <img src={product.image} alt={product.name} height="100px" />
-    <div>
-      <span> {product.name} </span>
+  <div key={product.id} className="product-container">
+    <img src={product.image} alt={product.name} />
+    <div className="mt-3">
+      <div className="col">
+        <p> {product.name} </p>
+        <p className="price"> {product.price}€ </p>
+      </div>
       <button
         onClick={() => handleAddToCart(product)}
+        className="btn btn-block button-add"
         disabled={product.stock <= 0 || product.quantity > 0}
       >
-        {product.price}€
+        Add to Cart
       </button>
-      {product.quantity}
     </div>
   </div>
 );

@@ -13,22 +13,26 @@ const propTypes = {
 const ProductList = ({ products, categorySelected, addToCart }) => {
   if (!categorySelected.id) {
     return (
-      <div>
+      <div className="col-12 row">
         {
           products.map(product => (
-            <Product key={product.id} product={product} handleAddToCart={addToCart} />
+            <div className="col-12 col-md-6 col-lg-3 text-center" key={product.id}>
+              <Product product={product} handleAddToCart={addToCart} />
+            </div>
           ))
         }
       </div>
     );
   }
   return (
-    <div>
+    <div className="col-12 row">
       {
         products.map((product) => {
           if (categorySelected.id === product.category) {
           return (
-            <Product key={product.id} product={product} handleAddToCart={addToCart} />
+            <div className="col-12 col-md-6 col-lg-3 text-center" key={product.id}>
+              <Product product={product} handleAddToCart={addToCart} />
+            </div>
           );
         } return false;
         })
