@@ -11,32 +11,66 @@ const propTypes = {
 };
 
 const ShoppingCart = ({ cart, removeFromCart, increaseQuantity }) => (
-  <table className="cart-container">
-    <tbody>
-      {
-        cart.map(product => (
-          <tr key={product.id}>
-            <td> {product.name} </td>
-            <td> {product.price} </td>
-            <td> Quantity: {product.quantity} </td>
-            <td>
-              <button onClick={() => increaseQuantity(product)}> Más </button>
-            </td>
-            <td>
-              <button onClick={() => removeFromCart(product)}> Remove </button>
-            </td>
-          </tr>
-        ))
-      }
-    </tbody>
-    <tfoot>
-      <tr>
-        <td>
-          Total: {cart.reduce((sum, product) => sum + (product.price * product.quantity), 0)}€
-        </td>
-      </tr>
-    </tfoot>
-  </table>
+  <div className="container">
+    <table className="table text-center borderless">
+      <thead>
+        <tr>
+          <th> ITEM </th>
+          <th> QUANTITY </th>
+          <th> UNIT PRICE </th>
+          <th> ITEM TOTAL </th>
+          <th> &nbsp; </th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          cart.map(product => (
+            <tr key={product.id}>
+              <td>
+                <img src={product.image} alt={product.name} height="50px" />
+                <span> {product.name} </span>
+              </td>
+              <td>
+                <span
+                  onClick={() => decreaseQuantity(product)}
+                  role="presentation"
+                  onKeyDown={() => {}}
+                >
+                  <i className="fas fa-minus" />
+                </span>
+                <span> {product.quantity} </span>
+                <span
+                  onClick={() => increaseQuantity(product)}
+                  role="presentation"
+                  onKeyDown={() => {}}
+                >
+                  <i className="fas fa-plus" />
+                </span>
+              </td>
+              <td><span> {product.price}€ each </span></td>
+              <td><span> {product.price * product.quantity}€ </span></td>
+              <td>
+                <span
+                  onClick={() => removeFromCart(product)}
+                  role="presentation"
+                  onKeyDown={() => {}}
+                >
+                  <i className="fas fa-trash-alt button-delete" />
+                </span>
+              </td>
+            </tr>
+          ))
+          }
+      </tbody>
+    </table>
+    <div className="table-foot text-right">
+      <span className="mr-3"> ORDER TOTAL: </span>
+      <span> {cart.reduce((sum, product) => sum + (product.price * product.quantity), 0)}€ </span>
+    </div>
+    <div className="p-3 text-right">
+      <button className="btn button-checkout"> CHECKOUT </button>
+    </div>
+  </div>
 );
 
 const mapStateToProps = state => (

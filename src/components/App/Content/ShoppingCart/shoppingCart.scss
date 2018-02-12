@@ -1,4 +1,40 @@
-.cart-container {
-  background-color: rgb(36, 91, 128);
-  color: white;
+@import './../../variables';
+
+.table thead {
+  background-color: #e9ecef;
+}
+
+.borderless td, .borderless th, .table thead th  {
+  border: none;
+}
+
+.fas {
+  cursor: pointer;
+  font-size: 12px;
+  color: $main-color;
+  margin: 0 10px;
+}
+
+.table-foot {
+  border-bottom: 1px solid #e9ecef;
+  border-top: 1px solid #e9ecef;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 18px;
+  color: $main-color;
+}
+
+.button-delete {
+  font-size: 16px;
+}
+
+.button-checkout {
+  background-color: $main-color;
+  color: $white;
+  font-weight: 500;
+  padding: 10px 50px;
+}
+
+.button-checkout:hover {
+  background-color: darken($main-color, 5%);
 }
