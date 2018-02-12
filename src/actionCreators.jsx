@@ -38,6 +38,14 @@ const actionIncreaseQuantity = product => (
   }
 );
 
+// Decrease quantity of product
+const actionDecreaseQuantity = product => (
+  {
+    type: 'DECREASE_QUANTITY',
+    product,
+  }
+);
+
 // Change category selected
 const actionChangeCategory = category => (
   {
@@ -46,4 +54,11 @@ const actionChangeCategory = category => (
   }
 );
 
-export { actionLoadProducts, actionAddToCart, actionRemoveFromCart, actionIncreaseQuantity, actionChangeCategory };
+export {
+  actionLoadProducts,
+  actionAddToCart,
+  actionRemoveFromCart,
+  actionIncreaseQuantity,
+  actionDecreaseQuantity,
+  actionChangeCategory,
+};

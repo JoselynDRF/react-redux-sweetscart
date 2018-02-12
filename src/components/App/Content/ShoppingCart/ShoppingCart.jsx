@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { actionRemoveFromCart, actionIncreaseQuantity } from './../../../../actionCreators';
+import { actionRemoveFromCart, actionIncreaseQuantity, actionDecreaseQuantity } from './../../../../actionCreators';
 import './shoppingCart.scss';
 
 const propTypes = {
   cart: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   removeFromCart: PropTypes.func.isRequired,
   increaseQuantity: PropTypes.func.isRequired,
+  decreaseQuantity: PropTypes.func.isRequired,
 };
 
-const ShoppingCart = ({ cart, removeFromCart, increaseQuantity }) => (
+const ShoppingCart = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity }) => ( // eslint-disable-line
   <div className="container">
     <table className="table text-center borderless">
       <thead>
@@ -86,6 +87,9 @@ const mapDispatchToProps = dispatch => (
     },
     increaseQuantity(product) {
       dispatch(actionIncreaseQuantity(product));
+    },
+    decreaseQuantity(product) {
+      dispatch(actionDecreaseQuantity(product));
     },
   }
 );

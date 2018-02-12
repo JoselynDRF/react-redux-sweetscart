@@ -1,7 +1,15 @@
 @import './../../variables';
 
+.table {
+  user-select: none;
+}
+
 .table thead {
   background-color: #e9ecef;
+}
+
+.table tbody td {
+  vertical-align: middle;
 }
 
 .borderless td, .borderless th, .table thead th  {

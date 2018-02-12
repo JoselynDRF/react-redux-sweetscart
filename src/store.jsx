@@ -37,6 +37,13 @@ const cart = (state = [], action) => {
         product.quantity += 1;
       } return product;
     });
+  } else if (action.type === 'DECREASE_QUANTITY') {
+    return state.map((index) => {
+      const product = index;
+      if (product.id === action.product.id) {
+        product.quantity = (product.quantity > 1) ? product.quantity -= 1 : 1;
+      } return product;
+    });
   }
 
   return state;
