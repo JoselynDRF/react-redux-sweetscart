@@ -57,4 +57,16 @@ const categorySelected = (state = {}, action) => {
   return state;
 };
 
-export default createStore(combineReducers({ products, cart, categorySelected }), applyMiddleware(thunk));
+const openCart = (state = false, action) => {
+  if (action.type === 'OPEN_CART') {
+    return action.openCart;
+  }
+  return state;
+};
+
+export default createStore(combineReducers({
+  products,
+  cart,
+  categorySelected,
+  openCart,
+}), applyMiddleware(thunk));

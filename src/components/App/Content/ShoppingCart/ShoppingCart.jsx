@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { actionRemoveFromCart, actionIncreaseQuantity, actionDecreaseQuantity } from './../../../../actionCreators';
+import {
+  actionRemoveFromCart,
+  actionIncreaseQuantity,
+  actionDecreaseQuantity,
+  actionOpenCart,
+} from './../../../../actionCreators';
 import './shoppingCart.scss';
 
 const propTypes = {
@@ -11,7 +16,7 @@ const propTypes = {
   decreaseQuantity: PropTypes.func.isRequired,
 };
 
-const ShoppingCart = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity }) => ( // eslint-disable-line
+const ShoppingCart = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity, handleOpenCart}) => ( // eslint-disable-line
   <div className="container">
     <table className="table text-center borderless">
       <thead>
@@ -37,7 +42,7 @@ const ShoppingCart = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity
                   role="presentation"
                   onKeyDown={() => {}}
                 >
-                  <i className="fas fa-minus" />
+                  <i className="fas icon-cart fa-minus" />
                 </span>
                 <span> {product.quantity} </span>
                 <span
@@ -45,7 +50,7 @@ const ShoppingCart = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity
                   role="presentation"
                   onKeyDown={() => {}}
                 >
-                  <i className="fas fa-plus" />
+                  <i className="fas icon-cart fa-plus" />
                 </span>
               </td>
               <td><span> {product.price}€ each </span></td>
@@ -56,7 +61,7 @@ const ShoppingCart = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity
                   role="presentation"
                   onKeyDown={() => {}}
                 >
-                  <i className="fas fa-trash-alt button-delete" />
+                  <i className="fas icon-cart fa-trash-alt button-delete" />
                 </span>
               </td>
             </tr>
@@ -68,8 +73,13 @@ const ShoppingCart = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity
       <span className="mr-3"> ORDER TOTAL: </span>
       <span> {cart.reduce((sum, product) => sum + (product.price * product.quantity), 0)}€ </span>
     </div>
-    <div className="p-3 text-right">
-      <button className="btn button-checkout"> CHECKOUT </button>
+    <div className="d-flex justify-content-between">
+      <div className="p-3 text-left">
+        <button className="btn button-checkout" onClick={() => handleOpenCart(false)}> BACK </button>
+      </div>
+      <div className="p-3 text-right">
+        <button className="btn button-checkout"> CHECKOUT </button>
+      </div>
     </div>
   </div>
 );
@@ -90,6 +100,9 @@ const mapDispatchToProps = dispatch => (
     },
     decreaseQuantity(product) {
       dispatch(actionDecreaseQuantity(product));
+    },
+    handleOpenCart(stateCart) {
+      dispatch(actionOpenCart(stateCart));
     },
   }
 );

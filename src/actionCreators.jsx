@@ -54,6 +54,13 @@ const actionChangeCategory = category => (
   }
 );
 
+const actionOpenCart = stateCart => (
+  {
+    type: 'OPEN_CART',
+    openCart: stateCart,
+  }
+);
+
 export {
   actionLoadProducts,
   actionAddToCart,
@@ -61,4 +68,5 @@ export {
   actionIncreaseQuantity,
   actionDecreaseQuantity,
   actionChangeCategory,
+  actionOpenCart,
 };
