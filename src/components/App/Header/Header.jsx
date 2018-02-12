@@ -8,7 +8,7 @@ const propTypes = {
   handleOpenCart: PropTypes.func.isRequired,
 };
 
-function Header({ handleOpenCart }) {
+function Header({ handleOpenCart, cart }) {
   return (
     <header className="header-container sticky-top">
       <div className="d-flex justify-content-between">
@@ -27,11 +27,18 @@ function Header({ handleOpenCart }) {
           onKeyDown={() => {}}
         >
           <i className="fas fa-shopping-cart" />
+          <span> {cart.length} </span>
         </span>
       </div>
     </header>
   );
 }
+
+const mapStateToProps = state => (
+  {
+    cart: state.cart,
+  }
+);
 
 const mapDispatchToProps = dispatch => (
   {
@@ -43,4 +50,4 @@ const mapDispatchToProps = dispatch => (
 
 
 Header.propTypes = propTypes;
-export default connect(null, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

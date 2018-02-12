@@ -5,9 +5,10 @@ import './product.scss';
 const propTypes = {
   product: PropTypes.shape().isRequired,
   handleAddToCart: PropTypes.func.isRequired,
+  handleRemoveFromCart: PropTypes.func.isRequired,
 };
 
-const Product = ({ product, handleAddToCart }) => (
+const Product = ({ product, handleAddToCart, handleRemoveFromCart }) => (
   <div key={product.id} className="product-container">
     <img src={product.image} alt={product.name} />
     <div className="mt-3">
@@ -15,13 +16,22 @@ const Product = ({ product, handleAddToCart }) => (
         <p> {product.name} </p>
         <p className="price"> {product.price}€ </p>
       </div>
-      <button
-        onClick={() => handleAddToCart(product)}
-        className="btn btn-block button-add"
-        disabled={product.stock <= 0 || product.quantity > 0}
-      >
-        Add to Cart
-      </button>
+      { (product.quantity === 0) ?
+        <button
+          onClick={() => handleAddToCart(product)}
+          className="btn btn-block button-add"
+          disabled={product.stock <= 0}
+        >
+          Add to Cart
+        </button>
+        :
+        <button
+          onClick={() => handleRemoveFromCart(product)}
+          className="btn btn-block button-add"
+        >
+          Remove
+        </button>
+      }
     </div>
   </div>
 );
