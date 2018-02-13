@@ -26,7 +26,7 @@ const ShoppingCart = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity
         <div>
           <span className="msg-empty-cart"> Your cart is empty! </span>
           <div className="mt-4">
-            <button className="btn button-checkout" onClick={() => handleOpenCart(false)}> BACK </button>
+            <button className="btn button-back" onClick={() => handleOpenCart(false)}> BACK </button>
           </div>
         </div> :
         <div>
@@ -54,7 +54,7 @@ const ShoppingCart = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity
                         role="presentation"
                         onKeyDown={() => {}}
                       >
-                        <i className="fas icon-cart fa-minus" />
+                        <i className="fas fa-minus icons-cart" />
                       </span>
                       <span> {product.quantity} </span>
                       <span
@@ -62,7 +62,7 @@ const ShoppingCart = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity
                         role="presentation"
                         onKeyDown={() => {}}
                       >
-                        <i className="fas icon-cart fa-plus" />
+                        <i className="fas fa-plus icons-cart" />
                       </span>
                     </td>
                     <td><span> {product.price}€ each </span></td>
@@ -73,7 +73,7 @@ const ShoppingCart = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity
                         role="presentation"
                         onKeyDown={() => {}}
                       >
-                        <i className="fas icon-cart fa-trash-alt button-delete" />
+                        <i className="fas fa-trash-alt icon-delete" />
                       </span>
                     </td>
                   </tr>
@@ -87,7 +87,7 @@ const ShoppingCart = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity
           </div>
           <div className="d-flex justify-content-between">
             <div className="p-3 text-left">
-              <button className="btn button-checkout" onClick={() => handleOpenCart(false)}> BACK </button>
+              <button className="btn button-back" onClick={() => handleOpenCart(false)}> BACK </button>
             </div>
             <div className="p-3 text-right">
               <button className="btn button-checkout"> CHECKOUT </button>

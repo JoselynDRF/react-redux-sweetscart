@@ -15,7 +15,7 @@ function Header({ handleOpenCart, cart }) {
     <header className="header-container sticky-top">
       <div className="d-flex justify-content-between">
         <div>
-          <img src={imgLogo} alt="Logo" className="img-logo" />
+          <img src={imgLogo} alt="Logo" />
           <span
             className="header-title"
             onClick={() => handleOpenCart(false)}
@@ -26,7 +26,7 @@ function Header({ handleOpenCart, cart }) {
           </span>
         </div>
         <span
-          className="icon-add-to-cart"
+          className="icon-show-cart"
           onClick={() => handleOpenCart(true)}
           role="presentation"
           onKeyDown={() => {}}

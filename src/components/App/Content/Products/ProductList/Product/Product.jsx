@@ -19,7 +19,7 @@ const Product = ({ product, handleAddToCart, handleRemoveFromCart }) => (
       { (product.quantity === 0) ?
         <button
           onClick={() => handleAddToCart(product)}
-          className="btn btn-block button-add"
+          className="btn btn-block button-product"
           disabled={product.stock <= 0}
         >
           Add to Cart
@@ -27,7 +27,7 @@ const Product = ({ product, handleAddToCart, handleRemoveFromCart }) => (
         :
         <button
           onClick={() => handleRemoveFromCart(product)}
-          className="btn btn-block button-add"
+          className="btn btn-block button-product"
         >
           Remove
         </button>

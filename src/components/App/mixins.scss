@@ -1,0 +1,25 @@
+// MIXIN Buttons
+@mixin style-buttons($background-color, $color) {
+  background-color: $background-color;
+  color: $color;
+
+  &:enabled {
+    &:hover {
+      background-color: darken($main-color, 5%);
+    }
+  }
+}
+
+// MIXIN Icons
+@mixin style-icons($color, $font-size) {
+  color: $color;
+  cursor: pointer;
+  font-size: $font-size;
+}
+
+// MIXIN Images
+@mixin style-images($border-radius, $height, $width) {
+  border-radius: $border-radius;
+  height: $height;
+  width: $width;
+}

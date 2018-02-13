@@ -1,51 +1,5 @@
 @import './../../variables';
-
-.table {
-  user-select: none;
-}
-
-.table thead {
-  background-color: #e9ecef;
-}
-
-.table tbody td {
-  vertical-align: middle;
-}
-
-.borderless td, .borderless th, .table thead th  {
-  border: none;
-}
-
-.icon-cart {
-  cursor: pointer;
-  font-size: 12px;
-  color: $main-color;
-  margin: 0 10px;
-}
-
-.table-foot {
-  border-bottom: 1px solid #e9ecef;
-  border-top: 1px solid #e9ecef;
-  font-weight: bold;
-  padding: 20px;
-  font-size: 18px;
-  color: $main-color;
-}
-
-.button-delete {
-  font-size: 16px;
-}
-
-.button-checkout {
-  background-color: $main-color;
-  color: $white;
-  font-weight: 500;
-  padding: 10px 50px;
-}
-
-.button-checkout:enabled:hover {
-  background-color: darken($main-color, 5%);
-}
+@import './../../mixins';
 
 .title-cart {
   font-size: 30px;
@@ -56,10 +10,57 @@
   font-size: 20px;
 }
 
-// Repetido
+.button-checkout,
+.button-back {
+  @include style-buttons($main-color, $white);
+  font-weight: 500;
+  padding: 10px 50px;
+}
+
+.table {
+  user-select: none;
+
+  thead {
+    background-color: $gray;
+
+    th {
+      border: 0;
+    }
+  }
+
+  tbody {
+    td {
+      vertical-align: middle;
+    }
+  }
+}
+
+.borderless {
+  td,
+  th {
+    border: 0;
+  }
+}
+
+.table-foot {
+  border-bottom: 1px solid $gray;
+  border-top: 1px solid $gray;
+  color: $main-color;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.icons-cart {
+  @include style-icons($main-color, 12px);
+  margin: 0 10px;
+}
+
+.icon-delete {
+  @include style-icons($main-color, 16px);
+}
+
 .product-img {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
+  @include style-images(50%, 30px, 30px);
   margin-right: 10px;
 }

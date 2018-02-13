@@ -9,6 +9,7 @@ import App from './components/App/App';
 import './../src/assets/img/candies.jpg';
 import './../src/assets/img/chocolates.jpg';
 import './../src/assets/img/parties.jpg';
+import './../src/assets/img/favicon.ico';
 
 store.dispatch(actionLoadProducts());
 

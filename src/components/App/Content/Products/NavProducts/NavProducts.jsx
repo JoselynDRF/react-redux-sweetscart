@@ -27,7 +27,7 @@ function NavProducts({ changeCategory, categorySelected }) {
           role="presentation"
           onKeyDown={() => {}}
         >
-          <span className={(!categorySelected.id) ? 'active' : ''}> All </span>
+          <span className={(!categorySelected.id) ? 'active-category' : ''}> All </span>
         </li>
         {
           categories.map(category => (
@@ -38,7 +38,9 @@ function NavProducts({ changeCategory, categorySelected }) {
               role="presentation"
               onKeyDown={() => {}}
             >
-              <span className={(categorySelected.id === category.id) ? 'active' : ''}> { category.name } </span>
+              <span className={(categorySelected.id === category.id) ? 'active-category' : ''}>
+                { category.name }
+              </span>
             </li>
           ))
         }
