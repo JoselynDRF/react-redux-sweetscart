@@ -1,6 +1,13 @@
 # ReactJS/Redux - SweetsCart
 Project for educational purposes (ReactJS and Redux).
 
+## Features:
+* Show products by category
+* Add products to shopping cart
+* Remove products from cart
+* Show cart with items, prices, quantity and total
+* Change the quantity of an item
+
 ## Getting Started
 
 ### Dependencies:
