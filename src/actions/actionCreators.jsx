@@ -1,4 +1,5 @@
 import axios from 'axios';
+import * as types from './../constants/ActionTypes';
 
 // Load products from service
 const actionLoadProducts = () => (
@@ -6,7 +7,7 @@ const actionLoadProducts = () => (
     axios.get('http://localhost:3000/products')
       .then((response) => {
         dispatch({
-          type: 'LOAD_PRODUCTS',
+          type: types.LOAD_PRODUCTS,
           products: response.data,
         });
       })
@@ -14,10 +15,18 @@ const actionLoadProducts = () => (
   )
 );
 
+// Open shopping cart
+const actionOpenCart = stateCart => (
+  {
+    type: types.OPEN_CART,
+    openCart: stateCart,
+  }
+);
+
 // Add product to shopping cart
 const actionAddToCart = product => (
   {
-    type: 'ADD_TO_CART',
+    type: types.ADD_TO_CART,
     product,
   }
 );
@@ -25,7 +34,7 @@ const actionAddToCart = product => (
 // Remove product from shopping cart
 const actionRemoveFromCart = product => (
   {
-    type: 'REMOVE_FROM_CART',
+    type: types.REMOVE_FROM_CART,
     product,
   }
 );
@@ -33,7 +42,7 @@ const actionRemoveFromCart = product => (
 // Increate quantity of product
 const actionIncreaseQuantity = product => (
   {
-    type: 'INCREASE_QUANTITY',
+    type: types.INCREASE_QUANTITY,
     product,
   }
 );
@@ -41,7 +50,7 @@ const actionIncreaseQuantity = product => (
 // Decrease quantity of product
 const actionDecreaseQuantity = product => (
   {
-    type: 'DECREASE_QUANTITY',
+    type: types.DECREASE_QUANTITY,
     product,
   }
 );
@@ -49,24 +58,17 @@ const actionDecreaseQuantity = product => (
 // Change category selected
 const actionChangeCategory = category => (
   {
-    type: 'CHANGE_CATEGORY_SELECTED',
+    type: types.CHANGE_CATEGORY_SELECTED,
     category,
-  }
-);
-
-const actionOpenCart = stateCart => (
-  {
-    type: 'OPEN_CART',
-    openCart: stateCart,
   }
 );
 
 export {
   actionLoadProducts,
+  actionOpenCart,
   actionAddToCart,
   actionRemoveFromCart,
   actionIncreaseQuantity,
   actionDecreaseQuantity,
   actionChangeCategory,
-  actionOpenCart,
 };

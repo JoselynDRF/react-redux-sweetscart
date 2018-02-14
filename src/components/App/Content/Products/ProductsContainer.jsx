@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import ProductList from './ProductList/ProductList';
 import NavProducts from './NavProducts/NavProducts';
-import { actionChangeCategory, actionAddToCart, actionRemoveFromCart } from './../../../../actionCreators';
+import { actionChangeCategory, actionAddToCart, actionRemoveFromCart } from './../../../../actions/actionCreators';
 
 const propTypes = {
   changeCategory: PropTypes.func.isRequired,

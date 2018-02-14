@@ -5,7 +5,7 @@ import 'normalize-css';
 import './app.scss';
 import Header from './Header/Header';
 import Content from './Content/Content';
-import { actionOpenCart } from './../../actionCreators';
+import { actionOpenCart } from './../../actions/actionCreators';
 
 const propTypes = {
   cart: PropTypes.arrayOf(PropTypes.shape()).isRequired,

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Cart from './Cart/Cart';
 import {
   actionRemoveFromCart, actionIncreaseQuantity, actionDecreaseQuantity, actionOpenCart,
-} from './../../../../actionCreators';
+} from './../../../../actions/actionCreators';
 
 const propTypes = {
   cart: PropTypes.arrayOf(PropTypes.shape()).isRequired,
