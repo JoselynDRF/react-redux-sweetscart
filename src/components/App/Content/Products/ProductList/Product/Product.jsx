@@ -11,11 +11,13 @@ const propTypes = {
 const Product = ({ product, handleAddToCart, handleRemoveFromCart }) => (
   <div key={product.id} className="product-container">
     <img src={product.image} alt={product.name} />
+
     <div className="mt-3">
       <div className="col">
         <p> {product.name} </p>
         <p className="price"> {product.price}€ </p>
       </div>
+
       { (product.quantity === 0) ?
         <button
           onClick={() => handleAddToCart(product)}
@@ -24,7 +26,7 @@ const Product = ({ product, handleAddToCart, handleRemoveFromCart }) => (
         >
           Add to Cart
         </button>
-        :
+      :
         <button
           onClick={() => handleRemoveFromCart(product)}
           className="btn btn-block button-product"

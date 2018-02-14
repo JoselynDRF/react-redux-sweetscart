@@ -1,21 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { actionChangeCategory } from './../../../../../actionCreators';
 import './navProducts.scss';
 
 const propTypes = {
-  changeCategory: PropTypes.func.isRequired,
+  categories: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   categorySelected: PropTypes.shape().isRequired,
+  changeCategory: PropTypes.func.isRequired,
 };
 
-function NavProducts({ changeCategory, categorySelected }) {
-  const categories = [
-    { id: 'candies', name: 'Candies' },
-    { id: 'chocolates', name: 'Chocolates' },
-    { id: 'parties', name: 'Parties' },
-  ];
-
+function NavProducts({ categories, categorySelected, changeCategory }) {
   return (
     <div>
       <span className="title-products"> PRODUCTS </span>
@@ -49,19 +42,5 @@ function NavProducts({ changeCategory, categorySelected }) {
   );
 }
 
-const mapStateToProps = state => (
-  {
-    categorySelected: state.categorySelected,
-  }
-);
-
-const mapDispatchToProps = dispatch => (
-  {
-    changeCategory(category = {}) {
-      dispatch(actionChangeCategory(category));
-    },
-  }
-);
-
 NavProducts.propTypes = propTypes;
-export default connect(mapStateToProps, mapDispatchToProps)(NavProducts);
+export default NavProducts;

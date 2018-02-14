@@ -1,24 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import Product from './Product/Product';
-import { actionAddToCart, actionRemoveFromCart } from './../../../../../actionCreators';
 
 const propTypes = {
-  products: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   categorySelected: PropTypes.shape().isRequired,
+  products: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   addToCart: PropTypes.func.isRequired,
   removeFromCart: PropTypes.func.isRequired,
 };
 
-const ProductList = ({ products, categorySelected, addToCart, removeFromCart }) => { // eslint-disable-line
-  if (!categorySelected.id) {
+const ProductList = (props) => {
+  if (!props.categorySelected.id) {
     return (
       <div className="col-12 row">
         {
-          products.map(product => (
+          props.products.map(product => (
             <div className="col-12 col-md-6 col-lg-4 text-center" key={product.id}>
-              <Product product={product} handleAddToCart={addToCart} handleRemoveFromCart={removeFromCart} />
+              <Product
+                product={product}
+                handleAddToCart={props.addToCart}
+                handleRemoveFromCart={props.removeFromCart}
+              />
             </div>
           ))
         }
@@ -28,11 +30,15 @@ const ProductList = ({ products, categorySelected, addToCart, removeFromCart }) 
   return (
     <div className="col-12 row">
       {
-        products.map((product) => {
-          if (categorySelected.id === product.category) {
+        props.products.map((product) => {
+          if (props.categorySelected.id === product.category) {
           return (
-            <div className="col-12 col-md-6 col-lg-3 text-center" key={product.id}>
-              <Product product={product} handleAddToCart={addToCart} handleRemoveFromCart={removeFromCart} />
+            <div className="col-12 col-md-6 col-lg-4 text-center" key={product.id}>
+              <Product
+                product={product}
+                handleAddToCart={props.addToCart}
+                handleRemoveFromCart={props.removeFromCart}
+              />
             </div>
           );
         } return false;
@@ -42,23 +48,5 @@ const ProductList = ({ products, categorySelected, addToCart, removeFromCart }) 
   );
 };
 
-const mapStateToProps = state => (
-  {
-    products: state.products,
-    categorySelected: state.categorySelected,
-  }
-);
-
-const mapDispatchToProps = dispatch => (
-  {
-    addToCart(product) {
-      dispatch(actionAddToCart(product));
-    },
-    removeFromCart(product) {
-      dispatch(actionRemoveFromCart(product));
-    },
-  }
-);
-
 ProductList.propTypes = propTypes;
-export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
+export default ProductList;
