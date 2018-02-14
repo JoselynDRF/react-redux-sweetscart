@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
-import * as types from './constants/ActionTypes';
+import * as types from './../constants/ActionTypes';
 
 // Products reducer
 const products = (state = [], action) => {

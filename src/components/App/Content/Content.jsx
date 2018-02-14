@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CartContainer from './ShoppingCart/CartContainer';
-import ProductsContainer from './Products/ProductsContainer';
+import CartContainer from './../../../containers/CartContainer';
+import ProductsContainer from '../../../containers/ProductsContainer';
 import imgBanner from './../../../../src/assets/img/candy-banner.png';
 
 const propTypes = {

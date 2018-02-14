@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Cart from './Cart/Cart';
+import Cart from './../components/App/Content/Cart/Cart';
 import {
   actionRemoveFromCart, actionIncreaseQuantity, actionDecreaseQuantity, actionOpenCart,
-} from './../../../../actions/actionCreators';
+} from './../actions/actionCreators';
 
 const propTypes = {
   cart: PropTypes.arrayOf(PropTypes.shape()).isRequired,

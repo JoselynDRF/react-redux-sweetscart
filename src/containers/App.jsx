@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import 'normalize-css';
-import './app.scss';
-import Header from './Header/Header';
-import Content from './Content/Content';
-import { actionOpenCart } from './../../actions/actionCreators';
+import './../components/App/app.scss';
+import Header from './../components/App/Header/Header';
+import Content from './../components/App/Content/Content';
+import { actionOpenCart } from './../actions/actionCreators';
 
 const propTypes = {
   cart: PropTypes.arrayOf(PropTypes.shape()).isRequired,
