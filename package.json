@@ -1,5 +1,5 @@
 {
-  "name": "sweets-cart",
+  "name": "react-redux-sweetscart",
   "version": "1.0.0",
   "description": "Project for educational purposes (ReactJS and Redux).",
   "main": "/build/app.js",

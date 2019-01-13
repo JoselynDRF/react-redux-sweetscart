@@ -1,4 +1,4 @@
-# ReactJS/Redux - SweetsCart
+# ReactJS & Redux - SweetsCart
 Project for educational purposes (ReactJS and Redux).
 
 ## Features:
