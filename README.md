@@ -1,5 +1,5 @@
 # ReactJS & Redux - SweetsCart
-Project for educational purposes (ReactJS and Redux).
+Shopping Cart with ReactJS and Redux
 
 ## Features:
 * Show products by category
