@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --colors",
     "serve": "webpack-dev-server --content-base build/ --colors --progress",
+    "json-server": "json-server --watch products.json",
     "start": "npm run build && npm run serve"
   },
   "author": "Joselyn Dos Ramos",
